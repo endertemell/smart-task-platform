@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ender\\OneDrive\\Masaüstü\\backend-engineer-training\\src\\ApiGateway\\ApiGateway.csproj": {}
+    "C:\\Users\\Ender\\OneDrive\\Masaüstü\\SmartTaskPlatform\\smart-task-platform\\src\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ender\\OneDrive\\Masaüstü\\backend-engineer-training\\src\\ApiGateway\\ApiGateway.csproj": {
+    "C:\\Users\\Ender\\OneDrive\\Masaüstü\\SmartTaskPlatform\\smart-task-platform\\src\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\backend-engineer-training\\src\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\SmartTaskPlatform\\smart-task-platform\\src\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\backend-engineer-training\\src\\ApiGateway\\ApiGateway.csproj",
+        "projectPath": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\SmartTaskPlatform\\smart-task-platform\\src\\ApiGateway\\ApiGateway.csproj",
         "packagesPath": "C:\\Users\\Ender\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\backend-engineer-training\\src\\ApiGateway\\obj\\",
+        "outputPath": "C:\\Users\\Ender\\OneDrive\\Masaüstü\\SmartTaskPlatform\\smart-task-platform\\src\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ender\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "Yarp.ReverseProxy": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             }
           },
           "imports": [

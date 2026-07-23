@@ -8,8 +8,11 @@
 
     <ItemGroup>
       <PackageReference Include="MassTransit" Version="9.1.2" />
-      <PackageReference Include="MassTransit.Kafka" Version="9.1.2" />
       <PackageReference Include="MassTransit.RabbitMQ" Version="9.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Enums\" />
     </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
+using BuildingBlocks.Core.Authentication;
 using BuildingBlocks.Core.Infrastructure;
 using BuildingBlocks.Messaging;
 using DocumentService.Application;
 using DocumentService.Infrastructure;
 using Scalar.AspNetCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddCustomMassTransit(builder.Configuration, typeof(Program).Assembly);
+
+// Add JWT Authentication & Authorization
+builder.Services.AddCustomJwtAuthentication(builder.Configuration);
 
 // Add Controller and API services
 builder.Services.AddControllers();
@@ -31,6 +34,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.UseHttpsRedirection();

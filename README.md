@@ -1,4 +1,4 @@
-# SmartTaskPlatform 🚀
+# SmartTaskPlatform 
 
 ![.NET 10](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet)
 ![Clean Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-blue?style=for-the-badge)

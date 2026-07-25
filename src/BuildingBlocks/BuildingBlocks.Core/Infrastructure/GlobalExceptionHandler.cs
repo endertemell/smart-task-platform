@@ -1,7 +1,8 @@
-using BuildingBlocks.Core;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
-namespace IdentityService.Api.Infrastructure;
+namespace BuildingBlocks.Core.Infrastructure;
 
 public class GlobalExceptionHandler : IExceptionHandler
 {
@@ -14,14 +15,16 @@ public class GlobalExceptionHandler : IExceptionHandler
 
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
-        _logger.LogError(exception, "An error occurred: {Message}", exception.Message);
+        _logger.LogError(exception, "Unhandled Exception: {Message}", exception.Message);
 
-        // Prepare the standard AppResponse format to return to the user
-        var response = AppResponse<object>.Failure(exception.Message, "An error occurred while processing your request.");
+        var response = AppResponse<object>.Failure(
+            error: exception.Message,
+            message: "An unexpected error occurred while processing your request."
+        );
 
         httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
-        
         await httpContext.Response.WriteAsJsonAsync(response, cancellationToken);
-        return true; 
+
+        return true;
     }
 }

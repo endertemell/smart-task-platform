@@ -1,7 +1,6 @@
-using BuildingBlocks.Core;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityService.Api.Controllers;
+namespace BuildingBlocks.Core.Controllers;
 
 [ApiController]
 public class BaseController : ControllerBase

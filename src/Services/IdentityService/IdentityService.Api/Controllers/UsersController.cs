@@ -1,4 +1,5 @@
 using BuildingBlocks.Core;
+using BuildingBlocks.Core.Controllers;
 using IdentityService.Application.Features.Users.Commands.RegisterUser;
 using IdentityService.Application.Features.Users.Queries.LoginUser;
 using MediatR;
